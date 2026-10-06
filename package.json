@@ -1,0 +1,58 @@
+{
+  "name": "inkan",
+  "version": "0.1.0",
+  "description": "An API server for Node where the docs can't lie: one contract per route gives you validation, types, OpenAPI, docs and tests.",
+  "keywords": [
+    "api",
+    "server",
+    "http",
+    "framework",
+    "openapi",
+    "validation",
+    "contract",
+    "typescript",
+    "express",
+    "fastapi"
+  ],
+  "license": "MIT",
+  "author": "Vensin (https://github.com/vxnsin)",
+  "homepage": "https://github.com/vxnsin/inkan#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vxnsin/inkan.git"
+  },
+  "bugs": "https://github.com/vxnsin/inkan/issues",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "inkan": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "assets/logo.svg"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "check:example": "node src/cli.ts check examples/shop.ts",
+    "dev:example": "node --watch examples/shop.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
