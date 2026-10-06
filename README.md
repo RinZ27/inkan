@@ -270,12 +270,11 @@ node src/cli.ts check examples/shop.ts
 
 ## Not yet
 
-- a typed client that reads the routes, with no codegen
-- CORS and `OPTIONS` out of the box
-- streaming answers and file uploads
-- routes from the file tree
-
-Ideas and issues are welcome.
+What comes next lives in the [issues](https://github.com/vxnsin/inkan/issues), and the
+[v0.2.0 milestone](https://github.com/vxnsin/inkan/milestone/1) is what comes first:
+`inkan examples` to pull explained example projects into your folder, CORS, editable
+requests on the docs page, turning inspector traffic into examples. Issues marked
+[good first issue](https://github.com/vxnsin/inkan/labels/good%20first%20issue) are a good place to start.
 
 ## License
 
