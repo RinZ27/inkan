@@ -2,7 +2,7 @@
 
 **An API server for Node where the docs can't lie.**
 
-[![npm](https://img.shields.io/npm/v/inkan?color=c4381f&labelColor=2b2420&label=npm)](https://www.npmjs.com/package/inkan)
+[![npm](https://img.shields.io/npm/v/@vxnsin/inkan?color=c4381f&labelColor=2b2420&label=npm)](https://www.npmjs.com/package/@vxnsin/inkan)
 [![CI](https://img.shields.io/github/actions/workflow/status/vxnsin/inkan/ci.yml?branch=main&color=3d7a4b&labelColor=2b2420&label=ci)](https://github.com/vxnsin/inkan/actions/workflows/ci.yml)
 [![dependencies](https://img.shields.io/badge/dependencies-0-ece1cf?labelColor=2b2420)](package.json)
 [![License](https://img.shields.io/badge/license-MIT-a87fe0?labelColor=2b2420)](LICENSE)
@@ -13,7 +13,7 @@
 
 <a href="https://github.com/vxnsin/inkan"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/repo-dark.svg?v=4e3252d9af"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/repo-light.svg?v=4e3252d9af" width="840" alt="vxnsin/inkan: An API server for Node where the docs can't lie: one contract per route gives you validation, types, OpenAPI, docs and tests."></picture></a>
 
-<a href="https://github.com/vxnsin/inkan#install"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-start-dark.svg?v=c2e08cb92e"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-start-light.svg?v=c2e08cb92e" width="95" alt="install →"></picture></a><a href="https://www.npmjs.com/package/inkan"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-npm-dark.svg?v=513902168b"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-npm-light.svg?v=513902168b" width="50" alt="npm"></picture></a><a href="https://github.com/vxnsin/warden"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-warden-dark.svg?v=0e950205da"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-warden-light.svg?v=0e950205da" width="69" alt="warden"></picture></a>
+<a href="https://github.com/vxnsin/inkan#install"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-start-dark.svg?v=c2e08cb92e"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-start-light.svg?v=c2e08cb92e" width="95" alt="install →"></picture></a><a href="https://www.npmjs.com/package/@vxnsin/inkan"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-npm-dark.svg?v=513902168b"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-npm-light.svg?v=513902168b" width="50" alt="npm"></picture></a><a href="https://github.com/vxnsin/warden"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-warden-dark.svg?v=0e950205da"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/nav-warden-light.svg?v=0e950205da" width="69" alt="warden"></picture></a>
 
 <a href="https://github.com/vxnsin/inkan/commits"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vxnsin/inkan/output/commits-dark.svg?v=383af25ca4"><img src="https://raw.githubusercontent.com/vxnsin/inkan/output/commits-light.svg?v=383af25ca4" width="840" alt="latest commits of vxnsin/inkan"></picture></a>
 
@@ -31,7 +31,7 @@ checks what goes out, writes OpenAPI 3.1, serves the docs, and runs every
 example as a test.
 
 ```ts
-import { inkan, problem, t } from "inkan";
+import { inkan, problem, t } from "@vxnsin/inkan";
 
 const Tea = t.object({ id: t.int(), name: t.string(), kind: t.enum(["green", "black", "oolong"]) });
 const teas = [{ id: 1, name: "Sencha", kind: "green" as const }];
@@ -95,8 +95,10 @@ the one thing neither does: holding the server to what its docs say.
 ## Install
 
 ```sh
-npm install inkan
+npm install @vxnsin/inkan
 ```
+
+The package is scoped because npm keeps the plain name `inkan` free of look-alikes. The command it installs is `inkan` either way.
 
 Node 20 or newer. On Node 22.18 and newer, `.ts` files run as they are,
 with no build step and no loader.

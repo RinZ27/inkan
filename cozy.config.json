@@ -4,7 +4,7 @@
   "cards": [
     { "type": "repo", "link": "https://github.com/vxnsin/inkan" },
     { "type": "button", "id": "nav-start", "label": "install →", "link": "https://github.com/vxnsin/inkan#install" },
-    { "type": "button", "id": "nav-npm", "label": "npm", "link": "https://www.npmjs.com/package/inkan" },
+    { "type": "button", "id": "nav-npm", "label": "npm", "link": "https://www.npmjs.com/package/@vxnsin/inkan" },
     { "type": "button", "id": "nav-warden", "label": "warden", "link": "https://github.com/vxnsin/warden" },
     { "type": "commits", "link": "https://github.com/vxnsin/inkan/commits" },
     { "type": "releases", "link": "https://github.com/vxnsin/inkan/releases" },

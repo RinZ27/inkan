@@ -1,5 +1,5 @@
 {
-  "name": "inkan",
+  "name": "@vxnsin/inkan",
   "version": "0.1.0",
   "description": "An API server for Node where the docs can't lie: one contract per route gives you validation, types, OpenAPI, docs and tests.",
   "keywords": [
@@ -39,6 +39,9 @@
     "dist",
     "assets/logo.svg"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=20"
   },
